@@ -4,12 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>JavaScript Usage in HTML</title>
+
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: grey;
+            opacity: 0.9;
+            padding: 10px;
+            justify-items: center;
+            border-radius: 10px;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+        }
+
+        button {
+            height: 30px;
+            width: 100px;
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>this is from html main</h1>
-    <script src="script.js"></script>
+    <div class="container">
+        <h1>Welcome to JS-Journey</h1>
+        <h2>Let's Start the Journey</h2>
+        <p>In JavaScript we can call JavaScript in Body & Head or in Both</p>
+
+        <p id="title">This is Text > Muhammad Ali</p>
+
+        <button type="button" onclick="doSomething()">Update title</button>
+
+        <script>
+            function doSomething() {
+                document.getElementById('title').innerHTML = "Full Stack Developer Muhammad Ali";
+            }
+        </script>
+    </div>
+
 </body>
 
 </html>
