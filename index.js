@@ -1,5 +1,6 @@
-// non global modueles
-const fs = require("fs");
-const app = require("./app");
+var http = require('http');
 
-fs.writeFileSync("newFile.txt", "Here is the data in file")
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World!');
+}).listen(8080);
