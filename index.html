@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Example of Js with HTML</title>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                height: 100vh;
+                width: 50%;
+                background-color: grey;
+                opacity: 0.80;
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            img {
+                max-width: 100%;
+                max-height: 200px;
+                border-radius: 10px;
+            }
+
+            button {
+                width: 50%;
+                height: 6%;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="card" class="card">
+            <img id="cardImage"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FZfKNrkRjdMCbAUf3Xqn6hfJXMUU_5wkS9ZO24qg56pSOy14nJl2_dV_ThIo7E_K8Uo&usqp=CAU"
+                alt="_">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quia tempore impedit vel? Animi omnis
+                repellendus, incidunt quis voluptates officia sit reiciendis cumque perspiciatis, commodi nisi rem,
+                perferendis atque fugiat.</p>
+            <button onclick="updateCard()" type="button">Update Card</button>
+        </div>
+
+
+        <script>
+            function updateCard() {
+                const card = document.getElementById('card');
+                card.style.color = "white";
+                card.style.backgroundColor = "blue";
+
+                const image = document.getElementById('cardImage');
+                image.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s";
+                image.alt = "Updated Image";
+                image.style.border = "5px solid white";
+                image.style.transform = "rotate(10deg)";
+            }
+        </script>
+
+    </body>
+
+</html>
